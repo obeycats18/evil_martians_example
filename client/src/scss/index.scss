@@ -1,0 +1,32 @@
+@import "./fonts";
+@import "./variables";
+@import "./general";
+
+//-----------------------
+// Components
+//-----------------------
+
+@import "./components/products";
+@import "./components/modal";
+@import "./components/form";
+@import "./components/field";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #e5e5e5;
+  font-family: $general_font;
+
+  overflow-x: hidden;
+}

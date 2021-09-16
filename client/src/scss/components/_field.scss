@@ -1,0 +1,59 @@
+.field {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  position: relative;
+
+  &__error-message {
+    margin-top: 4px;
+
+    font-size: $error-message_size;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+
+    color: $error_color;
+  }
+
+  //-----------------------------
+  // Validation state for field
+  //-----------------------------
+
+  &--success {
+    .field__input {
+      border-color: $accent_color;
+    }
+  }
+
+  &--error {
+    .field__input {
+      border-color: $error_color;
+    }
+  }
+
+  //-----------------------------
+  // Style for input
+  //-----------------------------
+
+  &__input {
+    width: 100%;
+
+    position: relative;
+
+    padding: 16px;
+
+    border: 1px solid rgba(#000000, 0.2);
+    border-radius: 16px;
+
+    font-size: $field_size;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+
+    color: $text_color;
+
+    transition: all 0.25s ease;
+  }
+}

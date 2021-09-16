@@ -1,0 +1,83 @@
+//-----------------------------
+// Main Content
+//-----------------------------
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 104px 0 114px 0;
+}
+
+//-----------------------------
+// Grid
+//-----------------------------
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+//-----------------------------
+// Buttons
+//-----------------------------
+
+.button {
+  min-width: 64px;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 16px 0;
+
+  background-color: transparent;
+  border-radius: 16px;
+  border: 1px solid;
+
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  transition: all 0.25s ease;
+}
+
+.button--filled {
+  background-color: $accent_color;
+  color: $button-filled_color;
+  border-color: transparent;
+}
+
+.button--outline {
+  border-color: rgba(0, 0, 0, 0.1);
+
+  color: $accent_color;
+
+  &:hover {
+    background-color: $accent_color;
+    border-color: transparent;
+    color: $button-filled_color;
+  }
+}
+
+//-----------------------------
+// Tools - Buy cheapest
+//-----------------------------
+
+.tools {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 68px;
+}

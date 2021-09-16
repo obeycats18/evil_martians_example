@@ -1,0 +1,144 @@
+// ------------------------------------
+// Style for product in product list
+// ------------------------------------
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1180px) {
+    justify-content: center;
+  }
+
+  .product {
+    width: 352px;
+
+    padding: 32px;
+    margin: 20px;
+
+    background: #ffffff;
+    border-radius: 24px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    &__info {
+      margin-bottom: 40px;
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+// ------------------------------------
+// Style for product in product modal
+// ------------------------------------
+
+.product-modal {
+  .product {
+    &__info {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      margin-bottom: 32px;
+    }
+
+    &__name {
+      margin-bottom: 16px;
+    }
+  }
+
+  .product-form__button {
+    .arrow-icon {
+      margin-left: 8px;
+      opacity: 0;
+      transition: all 0.25s ease;
+    }
+
+    &:hover {
+      .arrow-icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  .product-form__field {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+// ------------------------------------
+// General style for product
+// ------------------------------------
+
+.product {
+  &__category {
+    margin-bottom: 8px;
+
+    font-size: $label_size;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $text_color;
+
+    opacity: 0.5;
+  }
+
+  &__name {
+    font-weight: normal;
+    font-size: $title_size;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+
+    color: $text_color;
+
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  &__price {
+    display: flex;
+
+    font-weight: normal;
+    font-size: $value_size;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+
+    color: $text_color;
+
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+    }
+
+    .currency-symbol {
+      margin-top: 10px;
+      margin-right: 8px;
+
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: -0.02em;
+
+      color: $text_color;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 16px;
+      }
+    }
+  }
+}
